@@ -1,0 +1,67 @@
+/*===reset css===*/
+
+*,
+::before,
+::after{
+  
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Microsoft YaHei',sans-serif;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+input[type="text"],input[type="search"],textarea{
+    border: none;
+    outline: none;
+    resize: none;
+   
+    -webkit-appearance: none;
+}
+/*===common css===*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+    margin-right: 24px
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+.m_l10{
+    margin-left: 10px;
+}
+/*.m_r10{
+    margin-right: 36px;
+}*/
+
+
+[class^="icon_"],[class*=" icon_"]{
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}

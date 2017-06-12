@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html ng-app="xqApp" ng-controller="xqCtrl" ng-cloak>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+  <title>下载区详情页</title>
+  <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/modal.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+  <!--自适应 有着最小宽度和最大宽度限制的容器  居中-->
+  
+  <div class="jd_container">
+    <!--顶部标题-->
+    <header class="jd_search">
+      <div class="jd_search_box">
+        <h2 ng-cloak ng-bind="response[0].baseInfo.name"></h2>
+      </div>
+    </header>
+
+    <!--麻将信息-->
+
+    <!--轮播图-->
+
+
+    <!--导航栏-->
+    <nav class="jd_nav">
+    	
+      <ul class="clearfix">
+        <li><a href="#"><img ng-cloak ng-src="{{src}}/resources/image/icon/{{response[0].baseInfo.icon}}"/><p ng-cloak ng-bind="response[0].baseInfo.name"></p><p ng-cloak ng-bind="response[0].baseInfo.briefIntroduction"></p></a></li>
+      </ul>
+      
+    </nav>
+    <!--游戏概览-->
+    <div class="pro_tit gailan"><h3>游戏概览</h3></div>
+
+    <!--轮播部分-->
+    <div class="swiper-container">
+
+      <div class="swiper-wrapper">
+
+        <div ng-cloak class="swiper-slide" style="height: 200px; width:100%;" ng-repeat="slideItem in response[0].carouselFigure">
+          <img ng-cloak ng-src="{{src}}/resources/image/carouselFigure/{{slideItem}}"/>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="pro_tit"><h3>游戏信息</h3></div>
+    <!--游戏信息-->
+    <div class="jd_product" style="padding-bottom: 54px;">
+      <section class="jd_product_box">
+        <div class="center-box">
+
+
+          <div class="pro_tit no_b">
+            <div class="f_left">
+              <!-- second kill -->
+              <!--<span class="sk_icon"></span>-->
+              <span class="sk_name">下载次数</span>
+
+            </div>
+            <div class="f_right"><span  href="#"  ng-bind="response[0].baseInfo.downloadCount/10000 | number : 0"></span><span class="m_l">万</span></div>
+          </div>
+          <div class="pro_tit no_b">
+            <div class="f_left">
+              <!-- second kill -->
+              <!--<span class="sk_icon"></span>-->
+              <span class="sk_name">更新日期</span>
+
+            </div>
+            <div ng-cloak class="f_right"><span href="#"  ng-bind="response[0].details.updateTime | date:'yyyy-MM-dd hh:mm:ss'"></span></div>
+          </div>
+          <div class="pro_tit no_b">
+            <div class="f_left">
+              <!-- second kill -->
+              <!--<span class="sk_icon"></span>-->
+              <span class="sk_name">安装包</span>
+
+            </div>
+            <div class="f_right"><span ng-cloak href="#" ng-bind="response[0].baseInfo.size/1024"></span><span>M</span></div>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <!--更新内容-->
+      <div class="pro_tit"><h3>更新内容</h3></div>
+
+      <section class="jd_product_box clearfix">
+        <div class="center-box">
+
+
+          <div class="pro_tit no_b" ng-repeat="update in response[0].details.updateLog">
+            <div class="">
+              <!-- second kill -->
+              <!--<span class="sk_icon"></span>-->
+              <span ng-cloak class="sk_name">版本号：{{update.version}}更新详情：{{update.info}}</span>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pro_tit"><h3>游戏介绍</h3></div>
+
+      <section class="jd_product_box">
+        <div class="center-box">
+
+
+          <div class="pro_tit no_b">
+            <div class="f_left">
+              <!-- second kill -->
+              <span ng-cloak class="sk_name jieshao">{{response[0].details.detailedIntroduction}}
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </section>
+
+      <!--游戏介绍-->
+      <div ng-if="response[0].baseInfo.recommended">
+
+        <div class="pro_tit"><h3>相关游戏</h3></div>
+
+        <section class="jd_product_box">
+
+         <div class="xgyx-box">
+
+          <div class="left-box">
+           <div class="logo">
+            <img src=""/>
+
+          </div>
+        </div>
+        <div class="right-box">
+         <div class="box">
+           <p ng-cloak>{{response[0].baseInfo.name}}</p>
+           <p ng-cloak  class="jx">{{response[0].baseInfo.name}}<span>></span></p>
+           <span ng-cloak class="size">{{response[0].baseInfo.size/1024}}M</span>
+           <span ng-cloak class="dp">{{response[0].baseInfo.downloadCount/10000 | number : 0}}万人下载</span>
+         </div>
+       </div>
+
+     </div>
+   </section>
+
+ </div>
+</div>
+
+
+
+
+
+<!--底部下载-->
+<footer class="footer">
+  <div id="ex1" style="display:none;">
+    <div class="ewm-tu" style="margin-left: auto;">
+     <img ng-cloak style="width:100%; text-align: center;" ng-src="{{ewmsrc}}"/>
+
+   </div>
+ </div>
+ <ul class="clearfix ">
+
+  <li class="ewm4"><a href="#ex1" rel="modal:open" ng-click="showEwm(response[0].baseInfo.qr)">二维码</a></li>
+  <li><a ng-href="{{src}}/tools/downloadApp?appid={{response[0].appid}}&platform={{platform}}">立即下载</a></li>
+</ul>
+
+
+
+
+</footer>
+
+<!--弹出-->
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--<script src="../js/jquery.js"></script>-->
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-modal.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/xq.js"></script>
+   <!--<script src="js/common.js"></script>-->
+   <script src="js/index.js"></script>
+ </body>
+ </html>

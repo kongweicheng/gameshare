@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="indexApp" ng-controller="indexCtrl" ng-cloak>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+  <title>下载区详情页</title>
+  <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+  <!--<link href="https://cdn.bootcss.com/jquery-modal/0.8.0/jquery.modal.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" type="text/css" href="css/modal.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="css/tabs.css"/>
+</head>
+<body>
+  <!--自适应 有着最小宽度和最大宽度限制的容器  居中-->
+  <div class="jd_container">
+    <!--顶部标题-->
+    <header class="jd_search">
+      <div class="jd_search_box">
+        <h2>
+         下载专区
+       </h2>
+     </div>
+   </header>
+   <!--轮播部分-->
+   <div class="swiper-container lunboq clearfix">
+     <div class="swiper-wrapper ">
+       <div class="swiper-slide" style="height: 200px; width:100%;" ng-repeat="item in response[0].carouselFigure">
+        <a ng-href="xq.html?appid={{response[0].appid}}"><img ng-src="{{src}}/resources/image/carouselFigure/{{item}}"/></a>
+        <!-- <div class="xgyx-box  wenzi">
+         <div class="left-box">
+          <div class="logo">
+           <img src="" class="logo1"/>
+         </div>
+       </div>
+       <div class="right-box">
+        <div class="box">
+          <p class="name1"></p>
+          <p class="jx1">{{response[0].baseInfo.briefIntroduction}}<span>></span></p>
+          <span class="size s1">{{response[0].baseInfo.size/1024}}M</span>
+          <span class="dp1"></span>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+<!-- Add Pagination -->
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!-- <div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div> -->
+</div>
+<!-- 轮播结束 -->
+<!--tabs切换-->
+
+<div class="jd_product dw clearfix">
+  <!--二维码盒子-->
+  <div id="ex1" style="display:none;">
+    <div class="ewm-tu" style="margin-left: auto;">
+     <img ng-src="{{ewmsrc}}"/>
+   </div>
+ </div>
+
+ <section class="jd_product_box">
+  <div class="aaa clearfix">
+    <div class="tabs">
+      <a href="#" hidefocus="true" class="active">全部</a>
+       <!--<a href="#" hidefocus="true">游戏</a>--> 
+      <!-- <a href="#" hidefocus="true">游戏</a> -->
+      <!--<a href="#" hidefocus="true">游戏</a>-->
+    </div>
+    <div class="tabs-box swiper-container">
+      <div class="swiper-wrapper clearfix"  >
+        <div class="swiper-slide">
+         <div class="content-slide" >
+          <div ng-repeat="swiperItem in response" style="margin-bottom:15px;">
+          
+            <div class="top-box" >
+            
+              	
+                <ul ng-click="toUrl(swiperItem)">
+                		  <a  ng-href="xq.html?appid={{swiperItem.appid}}">
+                  <li class="logo clearfix"><a  ng-href="xq.html?appid={{swiperItem.appid}}"><img ng-src="{{src}}/resources/image/icon/{{swiperItem.baseInfo.icon}}"/></a></li>
+                  <li class="jieshao clearfix">
+                  <p><a ng-href="xq.html?appid={{swiperItem.appid}}" ng-bind="swiperItem.baseInfo.name"></a></p>
+                  <!--<p class="xq_xinxi"><a ng-href="xq.html?appid={{swiperItem.appid}}" ng-bind="swiperItem.baseInfo.briefIntroduction"></a></p>-->
+
+                  <span class="size" ng-bind="swiperItem.baseInfo.size/1024 | number : 0"> </span><span>M</span>
+                  <span class="download">{{swiperItem.baseInfo.downloadCount/10000 | number : 0}} 万人下载</span>
+                 </li>
+                  </a>
+              </ul>
+               
+                 </div>
+                 
+        
+            
+          <div class="bottom-box">
+          	
+            <ul>
+             <li class="ewm1"><a href="#ex1" rel="modal:open" ng-click="showEwm(swiperItem.baseInfo.qr)">二维码</a></li>
+             <li><a ng-href="{{src}}/tools/downloadApp?appid={{swiperItem.appid}}&platform={{platform}}">立即下载</a></li>
+           </ul>
+           
+         </div>
+       </div>
+
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+
+
+
+
+<script src="js/jquery-1.12.4.js"></script>
+<!--<script src="../js/jquery.js"></script>-->
+<!--<script src="js/swiper-3.4.2.min.js"></script>-->
+<script src="js/jquery-modal.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery-1.10.1.min.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/idangerous.swiper.min.js"></script>
+<script src="js/angular.min.js"></script>
+
+
+<script src="js/index.js"></script>
+
+
+</body>
+</html>

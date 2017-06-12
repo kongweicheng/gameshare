@@ -1,0 +1,459 @@
+body{
+    background: #f5f5f5;
+}
+/*主体容器*/
+.jd_container{
+    width: 100%;
+    /*主流的设计稿 640px 或者 750px */
+    max-width: 640px;
+    /*最小设备宽度限制*/
+    min-width: 320px;
+    margin: 0 auto;
+   
+  
+}
+
+/*顶部搜索*/
+.jd_search{
+  
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+      
+}
+
+
+.jd_search .jd_search_box .icon_logo{
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    background-position: 0 -103px;
+}
+
+.jd_search .jd_search_box .login{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.jd_search .jd_search_box form{
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 50px;
+    position: relative;
+}
+.jd_search .jd_search_box form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.jd_search .jd_search_box form .icon_search{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 75px;
+    top: 10px;
+    background-position: -60px -109px;
+}
+
+    /*麻将信息*/
+   
+     .mj-info {
+     	 width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+     	
+     }
+     
+     .mj-info .mj-info-box {
+     	width: 100%;
+     	margin: 0 auto;
+     	
+     }
+     .mj-info-box ul {
+     	width: 100%;
+     	margin:  0 auto;
+     }
+     .mj-info-box li {
+        
+     }
+     
+     /*公布标题*/
+    
+    .pro_tit {
+    	 height: 34px;
+    line-height: 46px;
+    border-bottom: 1px0 solid #ddd;
+    }
+        
+    .pro_tit h3{
+    	
+    	  font-size: 16px;
+    position: relative;
+    font-weight: normal;
+    text-indent: 20px;
+    color: #666;
+    }
+     
+     
+     /*swiper*/
+    
+         .swiper-container {
+        width: 100%;
+        height: 100%;
+       
+    }
+    .swiper-slide {
+        text-align: center;
+        /*font-size: 18px;*/
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+     
+     
+     .swiper-wrapper img {
+     	width: 100%;
+     	
+     }
+     
+     
+     
+     
+     
+     
+     
+   
+
+/*轮播图*/
+.jd_banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.jd_banner ul:first-child{
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);/*兼容处理*/
+}
+.jd_banner ul:first-child li{
+    width: 10%;
+    float: left;
+}
+.jd_banner ul:first-child li a{
+    display: block;
+    width: 100%;
+}
+.jd_banner ul:first-child li a img{
+    width: 100%;
+    display: block;
+}
+.jd_banner ul:last-child{
+    width: 118px;
+    position: absolute;
+    left: 50%;
+    bottom:6px;
+    margin-left: -59px;
+}
+.jd_banner ul:last-child li{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    float: left;
+}
+.jd_banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+.jd_banner ul:last-child li.now{
+    background: #fff;
+}
+      
+
+/*图片文字说明*/
+
+     .wenzi {
+     	 position: absolute;
+     	 z-index: 100;
+     	 /*left: 10%;*/
+     	 top:10%;
+     	 left: 10%;
+     	 color: darkblue;
+     	text-align: left;
+    font-size: 16px;
+   
+  
+     	 
+         
+     }
+     
+
+   
+   /*tabs 切换*/
+  
+   
+
+
+/*导航栏*/
+.jd_nav{
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.jd_nav ul{
+    width: 100%;
+}
+.jd_nav ul li{
+    width: 100%;
+    /*float: left;*/
+}
+.jd_nav ul li a{
+    width: 100%;
+    display: block;
+}
+.jd_nav ul li a img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+.jd_nav ul li a p{
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0;
+    color: #666;
+}
+
+/*产品*/
+.jd_product{
+    width: 100%;
+    padding: 0 5px;
+}
+/*内容盒子的公用样式*/
+.jd_product .jd_product_box{
+    margin-top: 10px;
+    background: #fff;
+    /* x轴方向的偏移  y轴方向的偏移  模糊的  拓展半径（延伸的长度） 颜色  是否是阴影 */
+    box-shadow: 0 0 1px #ccc;
+    min-height: 200px;
+}
+.jd_product .jd_product_box .pro_tit{
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+}
+.jd_product .jd_product_box .pro_tit.no_b{
+    border-bottom: none;
+}
+.jd_product .jd_product_box .pro_tit h3{
+    font-size: 16px;
+    position: relative;
+    font-weight: normal;
+    text-indent: 20px;
+    color: #666;
+}
+.jd_product .jd_product_box .pro_tit h3::before{
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 3px;
+    height: 12px;
+    background: #d8505c;
+}
+
+.jd_product .jd_product_box .pro_con{}
+
+
+.center-box {
+padding-top: 40px;
+padding-left: 30px;
+height: 100px;
+}
+
+/*相关游戏 */
+  .xgyx-box {
+  	
+  	   width: 80%;
+  	 min-height: 200px;
+  	 /*background-color: #FFFFFF;*/
+  	  margin-top: 10px;
+  	  margin:  0 auto;
+  	  /*background-color: red;*/
+  
+     
+  	   
+  	
+  	
+  	
+  }
+  
+  
+  .xgyx-box .left-box {
+  	width: 20%;
+  	/*background-color: red;*/
+  	min-height: 100px;
+  	float: left;
+  	padding-top: 10%;
+  }
+  
+  .xgyx-box .right-box {
+  	width: 80%;
+  	/*background-color: yellow;*/
+  	min-height: 180px;
+
+  	float: right;
+  }
+  
+   .xgyx-box  .right-box .box {
+   	    height: 65px;
+   	    min-height: 80px;
+   	    /*border: 1px solid  red;*/
+   	    margin-top: 30px;
+   	    padding-left: 10%;
+   	    padding-top: 7%;
+   }
+          
+     .right-box p {
+     	margin-top: 5px;
+     }
+     .right-box .jx {
+     	margin-bottom: 10px;
+     }
+     
+     .right-box .dp {
+     	margin-left: 30px;
+     }
+     
+     .right-box .jx span {
+     	  float: right;
+     	  margin-top: 5px;
+     }
+   .xgyx-box .left-box .logo {
+   	     width: 100%;
+   	     height: 58px;
+   	      border: 1px solid blue;
+   	      margin: 40px auto;
+
+           
+   }
+  
+     
+  .xgyx-box .left-box .login img {
+  	
+  	  width: 100%;
+  }
+  
+
+    .jieshao .xq_xinxi {
+    	display: inline-block;
+    }
+/*footer*/
+
+    .footer {
+    	    position: fixed;
+    bottom: 0;
+  
+    width: 100%;
+    min-height: 54px;
+     background-color: #434343;
+    border-top: 1px solid #ccc;
+    max-width: 640px;
+    min-width: 320px;
+  
+    }
+   .footer ul {
+   	width: 100%;
+   	margin:  0 auto;
+   	text-align: center;
+   	line-height: 54px;
+   	
+   	
+   }
+   
+   .footer li {
+   	width: 50%;
+   	float: left;
+   	font-weight: bold;
+   	font-size: 18px;
+   	color: #ffffff;
+   	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+   }
+
+
+/*图标*/
+
+/*.sk_icon{
+    margin-left: 10px;
+    float: left;
+    width: 16px;
+    height: 20px;
+    background: url("../images/seckill-icon.png") no-repeat center/16px 20px;
+    margin-top: 6px;
+}*/
+.sk_name{
+    color: #d8505c;
+    /*margin-left: 36px;*/
+    float: left;
+}
+
+.jieshao {
+	margin-top: -20px;
+	margin-left: -15px;
+	line-height: 156%;
+}
+.sk_time{
+    float: left;
+    margin-left: 20px;
+}
+.sk_time span{
+    width: 15px;
+    height: 15px;
+    float: left;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+    margin-left: 3px;
+    margin-top: 9px;
+}
+
+/*概览*/
+   .gailan {
+	
+	 line-height: 33px;
+  }
+
+/*all*/
+.top-box ul {
+	cursor: pointer;
+}
